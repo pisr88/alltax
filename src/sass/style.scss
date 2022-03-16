@@ -1,5 +1,20 @@
-* {
+@use './colors' as c;
+
+*,
+::after,
+::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
 }
