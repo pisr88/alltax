@@ -1,4 +1,5 @@
 @use './colors' as c;
+@use './animation' as header-btn-animation;
 
 *,
 ::after,
@@ -13,12 +14,73 @@ html {
 	scroll-behavior: smooth;
 }
 
-body{
+body {
 	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
+}
+
+//HEADER
+.header {
+	&__hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/header-image-big.jpg');
+		background-position: center;
+		background-size: cover;
+		z-index: 0;
+	}
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -1;
+	}
+	&__hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		padding: 1em;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	h1 {
+		font-family: 'Playfair Display SC', serif;
+		text-align: center;
+		font-size: 4rem;
+		color: white;
+		text-transform: uppercase;
+		z-index: 10;
+	}
+
+	&__underline {
+		margin: 0.5em 0;
+		height: 4px;
+		width: 35%;
+		background-color: c.$color-primary;
+		z-index: 10;
+	}
+
+
+&__btn {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	font-size: 4rem;
+	text-decoration: none;
+}
 }
