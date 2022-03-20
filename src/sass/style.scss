@@ -1,5 +1,5 @@
 @use './colors' as c;
-@use './animation' as header-btn-animation;
+@use './hamburger';
 
 *,
 ::after,
@@ -81,5 +81,70 @@ body {
 		color: c.$color-primary;
 		font-size: 4rem;
 		text-decoration: none;
+	}
+}
+//NAVIGATION
+.hamburger {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.nav {
+	position: fixed;
+	top: -400px;
+	left: 0;
+	right: 0;
+	background-color: rgba(250, 250, 250, 1);
+	z-index: 500;
+
+	&-item {
+		position: relative;
+		top: -400px;
+		padding: 0.5em 2em;
+	}
+	&-item:first-child {
+		margin-top: 3.5em;
+		padding-top: 1em;
+		border-top: 1px solid c.$color-primary;
+	}
+
+	&-box {
+		padding-bottom: 1em;
+	}
+
+	&-item-link {
+		display: block;
+		text-decoration: none;
+		color: c.$color-text-nav;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+	}
+}
+.show-nav {
+	animation: entery 1s forwards;
+}
+
+.nav-box .nav-item:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.nav-box .nav-item:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.nav-box .nav-item:nth-child(4) {
+	animation-delay: 0.3s;
+}
+.nav-box .nav-item:nth-child(5) {
+	animation-delay: 0.4s;
+}
+.nav-box .nav-item:nth-child(6) {
+	animation-delay: 0.5s;
+}
+
+@keyframes entery {
+	from {
+		top: -400px;
+	}
+	to {
+		top: 0;
 	}
 }
