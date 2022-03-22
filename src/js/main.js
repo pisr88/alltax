@@ -1,6 +1,6 @@
 const burgerBtn = document.querySelector('.hamburger')
-const nav = document.querySelector('.nav-list')
-const navItem = document.querySelectorAll('.nav-item')
+const nav = document.querySelector('.nav__list')
+const navItem = document.querySelectorAll('.nav__item')
 
 const showNav = () => {
 	burgerBtn.classList.toggle('is-active')

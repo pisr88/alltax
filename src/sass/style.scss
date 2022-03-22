@@ -17,12 +17,29 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: 'Montserrat', sans-serif;
+	background-color: #ebecf2;
 }
 
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
+}
+
+.section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2.5em;
+	&__title {
+		font-size: 3.2rem;
+	}
+	&__underline {
+		height: 4px;
+		width: 80px;
+		background-color: c.$color-primary;
+	}
 }
 
 //HEADER
@@ -147,14 +164,14 @@ body {
 	border-radius: 1%;
 	z-index: 100;
 
-	.nav-header {
+	.nav__header {
 		position: relative;
 		background-color: #fff;
 		box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 		z-index: 50;
 	}
 
-	&-list {
+	&__list {
 		position: absolute;
 		display: block;
 		top: -400px;
@@ -164,18 +181,18 @@ body {
 		border-radius: 2%;
 		z-index: 20;
 	}
-	&-item {
+	&__item {
 		position: relative;
 		display: block;
 		top: -400px;
 		padding: 0.5em 2em;
 		z-index: 20;
 	}
-	&-item:first-child {
+	&__item:first-child {
 		padding-top: 4.5em;
 	}
 
-	&-item-link {
+	&__item-link {
 		display: block;
 		text-decoration: none;
 		color: black;
@@ -185,14 +202,14 @@ body {
 		z-index: 20;
 	}
 
-	&-logo {
+	&__logo {
 		display: inline-block;
 		padding: 0.2em 0.9em;
 		font-size: 3.6rem;
 		font-weight: bold;
 		z-index: 9999;
 	}
-	
+
 	.logo {
 		text-decoration: none;
 		color: c.$color-primary;
@@ -206,19 +223,19 @@ body {
 	animation: entery 1s forwards;
 }
 
-.nav-list .nav-item:nth-child(2) {
+.nav__list .nav__item:nth-child(2) {
 	animation-delay: 0.1s;
 }
-.nav-list .nav-item:nth-child(3) {
+.nav__list .nav__item:nth-child(3) {
 	animation-delay: 0.2s;
 }
-.nav-list .nav-item:nth-child(4) {
+.nav__list .nav__item:nth-child(4) {
 	animation-delay: 0.3s;
 }
-.nav-list .nav-item:nth-child(5) {
+.nav__list .nav__item:nth-child(5) {
 	animation-delay: 0.4s;
 }
-.nav-list .nav-item:nth-child(6) {
+.nav__list .nav__item:nth-child(6) {
 	animation-delay: 0.5s;
 }
 
@@ -228,5 +245,52 @@ body {
 	}
 	to {
 		top: 0;
+	}
+}
+
+//OFFERS
+.offers {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__icon {
+		padding: 0.4em;
+		font-size: 4.8rem;
+		color: white;
+		text-shadow: 0px 0px 5px #000;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 1em;
+		width: 75%;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.5em 1.5em;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		color: c.$color-primary;
+		border: 1px solid c.$color-primary;
+		border-radius: 8px;
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+	&__btn:active {
+		background-color: c.$color-primary;
+		color: white;
 	}
 }
