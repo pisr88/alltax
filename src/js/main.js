@@ -25,7 +25,7 @@ class Slider {
 		this.position = null
 		this.actualImg = 0
 		this.textSlide = ['Jank Kowalski', 'Anna Nowak', 'Anna Ptak']
-		this.textPosition = ['Prezes', 'Członek Zarządu', 'Członek Zarządu']
+		this.textPosition = ['Prezes', 'Główna Księgowa', 'Główna Księgowa']
 
 		this.UIelements = {
 			btnPrev: '[data-btn-prev]',
@@ -62,8 +62,8 @@ class Slider {
 		if (index < 0) {
 			this.img.setAttribute('src', this.images[imageArr.length - 1])
 			this.img.setAttribute('alt', this.textSlide[imageArr.length - 1])
-			this.name.textContent = this.textSlide[this.actualImg]
-			this.position.textContent = this.textPosition[this.actualImg]
+			this.name.textContent = this.textSlide[imageArr.length - 1]
+			this.position.textContent = this.textPosition[imageArr.length - 1]
 
 			this.actualImg = imageArr.length - 1
 		}
