@@ -202,6 +202,7 @@ body {
 		width: 100%;
 		padding-bottom: 1em;
 		background-color: white;
+		box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 		border-radius: 2%;
 		z-index: 20;
 	}
@@ -402,5 +403,87 @@ body {
 	}
 	&__logo {
 		font-weight: bold;
+	}
+}
+//footer
+.footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	&__logo {
+		margin-bottom: 0.5em;
+		font-size: 3.2rem;
+		color: $color-primary;
+		font-weight: bold;
+	}
+
+	.logo-part-two {
+		color: black;
+	}
+
+	&__menu {
+		position: relative;
+		padding: 0.5em 0;
+		text-transform: uppercase;
+	}
+	&__menu-title {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 1em;
+		padding: 0 0.5em;
+		text-transform: uppercase;
+		background-color: $color-section-bg-primary;
+		z-index: 20;
+	}
+	&__menu-line {
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		top: 1em;
+		background-color: $color-primary;
+		z-index: 10;
+	}
+
+	&__item {
+		list-style: none;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+	}
+	&__link:hover {
+		background-color: $color-primary;
+		color: white;
+	}
+
+	&__contact {
+		position: relative;
+		margin-top: 0.5em;
+	}
+	&__contact-title {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 0.5em;
+		padding: 0 0.5em;
+		text-transform: uppercase;
+		background-color: $color-section-bg-primary;
+		z-index: 20;
+	}
+	&__contact-line {
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		top: 0.5em;
+		background-color: $color-primary;
+		z-index: 10;
+	}
+
+	&__contact-address {
+		text-align: center;
+		font-size: 1.4rem;
 	}
 }
