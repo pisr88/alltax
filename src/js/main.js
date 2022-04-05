@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.hamburger')
 const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
+const footerYear = document.querySelector('.footer__year')
 
 const showNav = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -105,3 +106,12 @@ class Slider {
 
 const slider = new Slider(imageArr)
 slider.createSlider()
+
+//FOOTER
+
+const handleCurrentYear = () => {
+  const year = (new Date).getFullYear();
+  footerYear.innerText = year;
+}
+
+handleCurrentYear()

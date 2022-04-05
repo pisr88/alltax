@@ -267,7 +267,7 @@ body {
 @keyframes entery {
 	from {
 		top: -400px;
-	}
+  	}
 	to {
 		top: 0;
 	}
@@ -412,6 +412,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+  padding-bottom: 0px;
 
 	&__logo {
 		margin-bottom: 0.5em;
@@ -447,13 +448,23 @@ body {
 		z-index: 10;
 	}
 
+  &__box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em;
+
+  }
 	&__item {
 		list-style: none;
+    padding: 0.5em;
 	}
 
 	&__link {
 		display: block;
 		text-decoration: none;
+    color: #000;
 	}
 	&__link:hover {
 		background-color: $color-primary;
@@ -463,6 +474,7 @@ body {
 	&__contact {
 		position: relative;
 		margin-top: 0.5em;
+    margin-bottom: 1.5em;
 	}
 	&__contact-title {
 		position: relative;
@@ -486,4 +498,13 @@ body {
 		text-align: center;
 		font-size: 1.4rem;
 	}
+
+  &__down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid $color-primary;
+    padding: 1em;
+  }
 }
