@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.hamburger')
 const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
+const navItemLink = document.querySelectorAll('.nav__item-link')
 
 const showNav = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -105,3 +106,5 @@ class Slider {
 
 const slider = new Slider(imageArr)
 slider.createSlider()
+
+navItem.forEach(el => el.addEventListener('click', showNav))
