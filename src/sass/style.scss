@@ -273,6 +273,20 @@ body {
 	}
 }
 
+
+@keyframes reentery {
+	from {
+		top: 0px;
+	}
+	to {
+		top: -400;
+	}
+}
+
+.hide-nav {
+	animation: reentery 1s forwards;
+}
+
 //OFFERS
 .offers {
 	&__box {

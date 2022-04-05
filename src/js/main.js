@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.hamburger')
 const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
+const navLink = document.querySelectorAll('.nav__item-link')
 const footerYear = document.querySelector('.footer__year')
 
 const showNav = () => {
@@ -9,6 +10,14 @@ const showNav = () => {
 	navItem.forEach(el => {
 		el.classList.toggle('show-nav')
 	})
+
+	if (nav.classList.contains('active')) {
+		navItem.forEach(el => {
+			el.classList.toggle('hide-nav')
+		})
+		nav.classList.toggle('hide-nav')
+	}
+	nav.classList.add('active')
 }
 
 burgerBtn.addEventListener('click', showNav)
@@ -106,12 +115,15 @@ class Slider {
 
 const slider = new Slider(imageArr)
 slider.createSlider()
+navLink.forEach(el => {
+	el.addEventListener('click', showNav)
+})
 
 //FOOTER
 
 const handleCurrentYear = () => {
-  const year = (new Date).getFullYear();
-  footerYear.innerText = year;
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
 }
 
 handleCurrentYear()
