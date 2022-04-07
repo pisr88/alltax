@@ -54,6 +54,7 @@ body {
 	margin: 1.5em;
 	padding: 0.5em 1.5em;
 	text-transform: uppercase;
+	text-align: center;
 	letter-spacing: 0.8px;
 	color: $color-primary;
 	border: 1px solid $color-primary;
@@ -235,20 +236,19 @@ body {
 		z-index: 9999;
 	}
 
-  &__phone{
-    position: absolute;
-    display: block;
-    right: 1em;
-    top: 87vh;
-    font-size: 3.5rem;
-    a{
-      padding: 10px;
-      color: $color-primary;
-      border: 3px solid $color-primary;
-      border-radius: 50%;
-    }
-    
-  }
+	&__phone {
+		position: absolute;
+		display: block;
+		right: 1em;
+		top: 87vh;
+		font-size: 3.5rem;
+		a {
+			padding: 10px;
+			color: $color-primary;
+			border: 3px solid $color-primary;
+			border-radius: 50%;
+		}
+	}
 }
 .logo {
 	text-decoration: none;
@@ -279,17 +279,14 @@ body {
 	animation-delay: 0.5s;
 }
 
-
-
 @keyframes entery {
 	from {
 		top: -400px;
-  	}
+	}
 	to {
 		top: 0;
 	}
 }
-
 
 @keyframes reentery {
 	from {
@@ -443,7 +440,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-  padding-bottom: 0px;
+	padding-bottom: 0px;
 
 	&__logo {
 		margin-bottom: 0.5em;
@@ -479,23 +476,22 @@ body {
 		z-index: 10;
 	}
 
-  &__box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 1em;
-
-  }
+	&__box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin: 1em;
+	}
 	&__item {
 		list-style: none;
-    padding: 0.5em;
+		padding: 0.5em;
 	}
 
 	&__link {
 		display: block;
 		text-decoration: none;
-    color: #000;
+		color: #000;
 	}
 	&__link:hover {
 		background-color: $color-primary;
@@ -505,7 +501,7 @@ body {
 	&__contact {
 		position: relative;
 		margin-top: 0.5em;
-    margin-bottom: 1.5em;
+		margin-bottom: 1.5em;
 	}
 	&__contact-title {
 		position: relative;
@@ -530,12 +526,12 @@ body {
 		font-size: 1.4rem;
 	}
 
-  &__down{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-top: 1px solid $color-primary;
-    padding: 1em;
-  }
+	&__down {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		border-top: 1px solid $color-primary;
+		padding: 1em;
+	}
 }
