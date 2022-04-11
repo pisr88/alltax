@@ -236,19 +236,22 @@ body {
 		z-index: 9999;
 	}
 
-	&__phone {
-		position: absolute;
-		display: block;
-		right: 1em;
-		top: 87vh;
-		font-size: 3.5rem;
-		a {
-			padding: 10px;
-			color: $color-primary;
-			border: 3px solid $color-primary;
-			border-radius: 50%;
-		}
-	}
+  &__phone{
+    position: absolute;
+    display: block;
+    right: 0px;
+    top: 87vh;
+    font-size: 3.5rem;
+    a{
+      padding: 10px;
+      color: $color-primary;
+      border: 3px solid $color-primary;
+      border-radius: 50%;
+      border-top-right-radius: 0%;
+      border-bottom-right-radius: 0%;
+    }
+    
+  }
 }
 .logo {
 	text-decoration: none;
