@@ -238,7 +238,7 @@ body {
   &__phone{
     position: absolute;
     display: block;
-    right: 1em;
+    right: 0px;
     top: 87vh;
     font-size: 3.5rem;
     a{
@@ -246,6 +246,8 @@ body {
       color: $color-primary;
       border: 3px solid $color-primary;
       border-radius: 50%;
+      border-top-right-radius: 0%;
+      border-bottom-right-radius: 0%;
     }
     
   }
