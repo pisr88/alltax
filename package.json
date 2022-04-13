@@ -11,6 +11,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.17.2",
+		"@babel/plugin-transform-async-to-generator": "^7.16.8",
+		"@babel/plugin-transform-runtime": "^7.17.0",
 		"@babel/preset-env": "^7.16.11",
 		"browser-sync": "^2.27.7",
 		"cssnano": "^5.0.17",
@@ -29,5 +31,9 @@
 		"postcss": "^8.4.6",
 		"postcss-cli": "^9.1.0",
 		"sass": "^1.49.7"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.12.1",
+		"@babel/runtime": "^7.17.9"
 	}
 }
