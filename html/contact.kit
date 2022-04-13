@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kancelaria Rachunkowa ALLTAX|Księgowa Księgowy biuro rachunkowe biuro podatkowe Ruda Śląska - Halemba Wirek Nowy Bytom Bielszowice Kochłowice Mikołów Jaworzno">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display+SC:wght@400;700&display=swap"
+    rel="stylesheet">
+<link href="./dist/css/style.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/25daa6d81d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./dist/css/style.min.css">
+<title>ALLTAX|Biuro rachunkowe</title>
+</head>
+
+<body>
+    <!-- @include 'nav.kit' -->
+    <section class="contact section">
+      <div class="wrapper">
+        <div class="contact-header">
+          <h2 class="contact-header__title">Kontakt</h2>
+        <div class="contact-header__underline"></div>
+      </div>
+        <div class="contact__space">
+            <h3 class="contact__name">Alltax</h3>
+            <span class ="contact__job">Biuro rachunkowe</span>
+            <p class="contact__item">Adres</p>
+            <p class="contact__item">Telefon</p>
+            <p class="contact__item">Mail</p>
+            <p class="contact__item">KRS</p>
+            <p class="contact__item">NIP</p>      
+        </div>
+        <div class="contact__form">
+          <form >
+            <h3 class="contact__sendUs">Napisz do nas!</h3>
+            <div class="contact__box">
+              <input type="text" id="username" placeholder="Imię">
+              <p class="error-text">error</p>
+            </div>
+            <div class="contact__box">
+              <input type="email" id="email" placeholder="Podaj adres e-mail">
+              <p class="error-text">error</p>
+            </div>
+            <div class="contact__box">
+              <textarea id="text" placeholder="Wiadomość"></textarea>
+              <p class="error-text">error</p>
+            </div>
+            <div class="control-buttons">
+              <button class="send">Wyślij</button>
+            </div>
+          </form>
+        </div>
+        <div class="contact__map" id="map">
+       
+      </div>
+      </div>
+    </section>
+    <!-- @include 'footer.kit' -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrEp6bmqfKIA29DztcwBaY9J7PMxPJeJ8&callback=initMap&libraries=&v=weekly"
+    async></script>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+</html>

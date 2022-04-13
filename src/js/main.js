@@ -3,6 +3,7 @@ const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
 const navLink = document.querySelectorAll('.nav__item-link')
 const footerYear = document.querySelector('.footer__year')
+let map;
 
 const showNav = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -127,3 +128,42 @@ const handleCurrentYear = () => {
 }
 
 handleCurrentYear()
+
+
+//MAP
+
+function initMap() {
+
+  const myLatLng = {
+
+    lat: 50.24346371604312, 
+    lng: 18.848657020459434
+  };
+
+    map = new google.maps.Map(document.getElementById("map"), {
+    center: myLatLng,
+    zoom: 15,
+    
+
+    zoomControl: true,
+    mapTypeControl: true,
+    scaleControl: true,
+    streetViewControl: true,
+    rotateControl: true,
+    fullscreenControl: true
+    });
+
+    marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    animation: google.maps.Animation.DROP,
+    title: "AllTax",
+    });
+
+    marker.addListener("click", () => {
+    infowindow.open(map, marker);
+
+    });
+    
+}
+
