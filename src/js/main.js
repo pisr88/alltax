@@ -132,6 +132,7 @@ handleCurrentYear()
 
 //MAP
 
+
 function initMap() {
 
   const myLatLng = {
@@ -143,8 +144,6 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
     center: myLatLng,
     zoom: 15,
-    
-
     zoomControl: true,
     mapTypeControl: true,
     scaleControl: true,
@@ -153,17 +152,31 @@ function initMap() {
     fullscreenControl: true
     });
 
-    marker = new google.maps.Marker({
+    const marker = new google.maps.Marker({
     position: myLatLng,
     map,
     animation: google.maps.Animation.DROP,
     title: "AllTax",
     });
-
-    marker.addListener("click", () => {
-    infowindow.open(map, marker);
-
-    });
     
+    marker.addListener("click", () => {
+      infowindow.open(map, marker);
+      
+      });
+      const contentString =
+      '<div id="content">' +
+      '<div id="siteNotice">' +
+      "</div>" +
+      '<h2 id="firstHeading" class="firstHeading">Alltax</h2>' +
+      '<div id="bodyContent">' +
+      "<p>ul. Kłodnicka 97/301</p>" +
+      "<p>41-706 Ruda Śląska<br>Polska</p>" +
+      "<a href=https://www.google.com/maps/place/Biuro+Rachunkowe+Alltax/@50.2426541,18.8426967,18.12z/data=!4m5!3m4!1s0x0:0x3dbd92a7198b7ace!8m2!3d50.2426217!4d18.8427802>Zobacz w Mapach Google</a> "+
+      "</div>" +
+      "</div>";
+    const infowindow = new google.maps.InfoWindow({
+      content: contentString,
+  });
+
 }
 
