@@ -147,6 +147,7 @@ async function getOffers() {
                         name
                         scope
                         conditions
+						price
                     }
                     }
                 `,
@@ -162,14 +163,17 @@ async function getOffers() {
 			arr.forEach(el => {
 				let newScope = el.scope.split('\n')
 				let newConditions = el.conditions.split('\n')
-				newScope = newScope.map(el => `<li>${el}</li>`)
-				newConditions = newConditions.map(el => `<li>${el}</li>`)
-				let htmlEl = `<h3 class="pricelist__item-title">${el.name}</h3>
-				<div class="pricelist__item-body"><ul class="pricelist__item-list">${newScope
-					.join()
-					.replaceAll(',', '')}</ul> <ul class="pricelist__item-list">${newConditions
-					.join()
-					.replaceAll(',', '')}</ul></div>`
+				newScope = newScope.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
+				newConditions = newConditions.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
+				let htmlEl = `
+				<div class="pricelist__item-body">
+				<h3 class="pricelist__item-title">${el.name}</h3>
+				<p class="pricelist__item-price">${el.price}</p>
+				<p class="pricelist__item-scope">Zakres</p>
+				<ul class="pricelist__item-list">${newScope.join().replaceAll(',', '')}</ul> 
+				<p class="pricelist__item-conditions">Warunki</p>
+					<ul class="pricelist__item-list">${newConditions.join().replaceAll(',', '')}</ul>
+				</div>`
 				htmlBox += htmlEl
 			})
 			let container = document.querySelector('.pricelist__list')
@@ -177,3 +181,4 @@ async function getOffers() {
 		})
 }
 getOffers()
+
