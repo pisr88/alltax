@@ -237,22 +237,21 @@ body {
 		z-index: 9999;
 	}
 
-  &__phone{
-    position: absolute;
-    display: block;
-    right: 0px;
-    top: 87vh;
-    font-size: 3.5rem;
-    a{
-      padding: 10px;
-      color: $color-primary;
-      border: 3px solid $color-primary;
-      border-radius: 50%;
-      border-top-right-radius: 0%;
-      border-bottom-right-radius: 0%;
-    }
-    
-  }
+	&__phone {
+		position: absolute;
+		display: block;
+		right: 0px;
+		top: 87vh;
+		font-size: 3.5rem;
+		a {
+			padding: 10px;
+			color: $color-primary;
+			border: 3px solid $color-primary;
+			border-radius: 50%;
+			border-top-right-radius: 0%;
+			border-bottom-right-radius: 0%;
+		}
+	}
 }
 .logo {
 	text-decoration: none;
@@ -313,19 +312,25 @@ body {
 		align-items: center;
 		flex-wrap: wrap;
 	}
+
 	&__item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
+		padding: 1em 0;
+		border-bottom: 2px dashed $color-section-bg-third;
+	}
+
+	&__item:nth-last-child(2) {
+		border-bottom: none;
 	}
 
 	&__icon {
 		padding: 0.4em;
 		font-size: 4.8rem;
-		color: white;
-		text-shadow: 0px 0px 5px #000;
+		color: $color-primary;
 	}
 
 	&__title {
