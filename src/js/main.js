@@ -114,7 +114,9 @@ class Slider {
 }
 
 const slider = new Slider(imageArr)
-slider.createSlider()
+if (document.querySelector('[data-slider]')) {
+	slider.createSlider()
+}
 navLink.forEach(el => {
 	el.addEventListener('click', showNav)
 })
@@ -127,3 +129,56 @@ const handleCurrentYear = () => {
 }
 
 handleCurrentYear()
+
+// Pricelist
+// Pricelist - API form CMS
+
+async function getOffers() {
+	await fetch('https://api-eu-central-1.graphcms.com/v2/cl1qea3851j6901z76wz6foyx/master', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+		body: JSON.stringify({
+			query: `
+                    query {
+                    offers {
+                        name
+                        scope
+                        conditions
+						price
+                    }
+                    }
+                `,
+		}),
+	})
+		.then(res => {
+			if (!res.ok) return Promise.reject(response)
+			return res.json()
+		})
+		.then(res => {
+			arr = res.data.offers
+			let htmlBox = ''
+			arr.forEach(el => {
+				let newScope = el.scope.split('\n')
+				let newConditions = el.conditions.split('\n')
+				newScope = newScope.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
+				newConditions = newConditions.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
+				let htmlEl = `
+				<div class="pricelist__item-body">
+				<h3 class="pricelist__item-title">${el.name}</h3>
+				<p class="pricelist__item-price">${el.price}</p>
+				<p class="pricelist__item-scope">Zakres</p>
+				<ul class="pricelist__item-list">${newScope.join().replaceAll(',', '')}</ul> 
+				<p class="pricelist__item-conditions">Warunki</p>
+					<ul class="pricelist__item-list">${newConditions.join().replaceAll(',', '')}</ul>
+				</div>`
+				htmlBox += htmlEl
+			})
+			let container = document.querySelector('.pricelist__list')
+			container.innerHTML = htmlBox
+		})
+}
+getOffers()
+

@@ -56,6 +56,7 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.8px;
+	text-decoration: none;
 	color: $color-primary;
 	border: 1px solid $color-primary;
 	border-radius: 8px;
@@ -536,5 +537,117 @@ body {
 		background-color: #fff;
 		border-top: 1px solid $color-primary;
 		padding: 1em;
+	}
+}
+
+//PRICELIST
+
+.pricelist {
+	position: relative;
+	margin-top: 4em;
+
+	&__item-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		position: relative;
+		padding: 1.5em;
+		margin: 1em 0 4em;
+		transition: transform 0.3s;
+		border: 3px solid $color-section-bg-third;
+		border-radius: 2%;
+		color: $color-text;
+	}
+	&__item-body:nth-child(even) {
+		border: 3px solid $color-primary;
+	}
+	&__item-body:nth-child(even)::before {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 64px 64px 0 0;
+		border-color: $color-primary transparent transparent transparent;
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: '';
+	}
+	&__item-body:nth-child(even)::after {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		font-family: FontAwesome;
+		color: $color-section-bg-secondary;
+		font-size: 2rem;
+		content: '\f00c';
+	}
+
+	&__item-body:hover {
+		transform: translateY(-3%) scale(1.09);
+		touch-action: auto;
+	}
+	&__item-body:last-child {
+		margin-bottom: 0;
+	}
+
+	&__item-title {
+		display: inline-block;
+		text-align: center;
+		font-size: 2.6rem;
+		color: $color-text-black;
+	}
+	&__item-price {
+		text-align: center;
+		font-size: 1.2rem;
+	}
+
+	&__item-conditions,
+	&__item-scope {
+		display: inline-block;
+		position: relative;
+		width: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		margin: 1.5em 0;
+		padding: 0.3em 0.2em 0.3em 0.2em;
+		border: 1px solid $color-primary;
+		border-radius: 15px;
+	}
+
+	&__item-conditions::after,
+	&__item-scope::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		top: 50%;
+		left: -50%;
+		right: 100%;
+		background-color: $color-primary;
+	}
+	&__item-conditions::before,
+	&__item-scope::before {
+		content: '';
+		position: absolute;
+		height: 1px;
+		top: 50%;
+		left: 100%;
+		right: -50%;
+		background-color: $color-primary;
+	}
+
+	&__item-list {
+		display: block;
+		position: relative;
+		left: 60%;
+		transform: translateX(-50%);
+		padding: 0 1em;
+	}
+
+	&__item-list-item {
+		position: relative;
+		padding: 0.5em;
+		list-style-type: '—';
 	}
 }
