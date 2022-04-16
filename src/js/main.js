@@ -130,6 +130,7 @@ navLink.forEach(el => {
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
+  console.log('wczytaj sie');
 }
 
 handleCurrentYear()
@@ -138,13 +139,18 @@ handleCurrentYear()
 //CONTACT
 
 
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 
-sendBtn.addEventListener('click', e =>{
-  e.preventDefault()
-  console.log(username.value);
-})
+const testowa = () =>{
+  console.log('siema');
+}
+
+
+send.addEventListener('click', testowa)
+
+  
+
 
 
 
@@ -179,7 +185,6 @@ function initMap() {
     
     marker.addListener("click", () => {
       infowindow.open(map, marker);
-      
       });
       const contentString =
       '<div id="content">' +
@@ -197,4 +202,3 @@ function initMap() {
   });
 
 }
-
