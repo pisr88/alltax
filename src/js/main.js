@@ -3,6 +3,11 @@ const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
 const navLink = document.querySelectorAll('.nav__item-link')
 const footerYear = document.querySelector('.footer__year')
+const username = document.querySelector('#username')
+const email = document.querySelector('#email')
+const sendBtn = document.querySelector('.send')
+const errorText = document.querySelector('.error-text')
+
 let map;
 
 const showNav = () => {
@@ -128,6 +133,19 @@ const handleCurrentYear = () => {
 }
 
 handleCurrentYear()
+
+
+//CONTACT
+
+
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+sendBtn.addEventListener('click', e =>{
+  e.preventDefault()
+  console.log(username.value);
+})
+
 
 
 //MAP

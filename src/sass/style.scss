@@ -584,10 +584,6 @@ body {
     }
 
     &__form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 3rem;
     margin-bottom: 2rem;
     }
@@ -612,11 +608,12 @@ body {
       max-height: 500px;
         }
     .error-text{
+      visibility: hidden;
       color: $color-primary;
-      margin: 3px;
-      // visibility: hidden;
+      margin: 5px;
+      
     }
-    .control-button{
+      .control-button{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -629,12 +626,20 @@ body {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
+        
+        &:hover{
+          background-color: $color-primary;
+          transition: background-color .3s;
+        }
       }
     }
     
 
   &__map{
+    position: relative;
     height: 300px;
+    margin-top: 3em;
+    margin-bottom: 2rem;
    
    a{
     text-decoration: none;
