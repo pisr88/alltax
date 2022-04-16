@@ -655,4 +655,122 @@ body {
 		padding: 0.5em;
 		list-style-type: '—';
 	}
+  &__down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    // border-top: 1px solid $color-primary;
+    padding: 1em;
+  }
+}
+
+// CONTACT
+
+.contact{
+  position: relative;
+    
+  &__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+  &__header-title{ 
+      font-size: 4rem;
+    }
+    &__header-underline{
+    margin: 0.5em 0;
+		height: 4px;
+		width: 8em;
+		background-color: $color-primary;
+    }
+
+    &__space{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 1.5rem;
+    }
+    &__name{
+    
+      font-size: 3rem;
+    }
+
+    &__item,&__job{    
+      padding: 0.5rem;
+      margin: 0.5rem;
+      text-align: center;
+      // letter-spacing: 1px;
+    }
+
+    &__form{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    }
+
+    &__sendUs{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 2rem;
+      font-size: 2rem;
+    }
+    input,textarea{
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid rgb(197, 197, 197);
+      border-radius: 5px;
+    }
+    textarea{
+      max-width: 90vh;
+      max-height: 500px;
+        }
+    .error-text{
+      visibility: hidden;
+      color: $color-primary;
+      margin: 5px;
+      
+    }
+      .control-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      button{
+      padding: 12px 50px;
+    background: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+        
+        &:hover{
+          background-color: $color-primary;
+          transition: background-color .3s;
+        }
+      }
+    }
+    
+
+  &__map{
+    position: relative;
+    height: 300px;
+    margin-top: 3em;
+    margin-bottom: 2rem;
+   
+   a{
+    text-decoration: none;
+    color: blue;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  }
 }

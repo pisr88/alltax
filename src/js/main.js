@@ -3,6 +3,12 @@ const nav = document.querySelector('.nav__list')
 const navItem = document.querySelectorAll('.nav__item')
 const navLink = document.querySelectorAll('.nav__item-link')
 const footerYear = document.querySelector('.footer__year')
+const username = document.querySelector('#username')
+const email = document.querySelector('#email')
+const sendBtn = document.querySelector('.send')
+const errorText = document.querySelector('.error-text')
+
+let map;
 
 const showNav = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -126,6 +132,7 @@ navLink.forEach(el => {
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
+  console.log('wczytaj sie');
 }
 
 handleCurrentYear()
@@ -182,3 +189,70 @@ async function getOffers() {
 }
 getOffers()
 
+
+//CONTACT
+
+
+  // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+const testowa = () =>{
+  console.log('siema');
+}
+
+
+send.addEventListener('click', testowa)
+
+  
+
+
+
+
+//MAP
+
+
+function initMap() {
+
+  const myLatLng = {
+
+    lat: 50.24346371604312, 
+    lng: 18.848657020459434
+  };
+
+    map = new google.maps.Map(document.getElementById("map"), {
+    center: myLatLng,
+    zoom: 15,
+    zoomControl: true,
+    mapTypeControl: true,
+    scaleControl: true,
+    streetViewControl: true,
+    rotateControl: true,
+    fullscreenControl: true
+    });
+
+    const marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+    animation: google.maps.Animation.DROP,
+    title: "AllTax",
+    });
+    
+    marker.addListener("click", () => {
+      infowindow.open(map, marker);
+      });
+      const contentString =
+      '<div id="content">' +
+      '<div id="siteNotice">' +
+      "</div>" +
+      '<h2 id="firstHeading" class="firstHeading">Alltax</h2>' +
+      '<div id="bodyContent">' +
+      "<p>ul. Kłodnicka 97/301</p>" +
+      "<p>41-706 Ruda Śląska<br>Polska</p>" +
+      "<a href=https://www.google.com/maps/place/Biuro+Rachunkowe+Alltax/@50.2426541,18.8426967,18.12z/data=!4m5!3m4!1s0x0:0x3dbd92a7198b7ace!8m2!3d50.2426217!4d18.8427802>Zobacz w Mapach Google</a> "+
+      "</div>" +
+      "</div>";
+    const infowindow = new google.maps.InfoWindow({
+      content: contentString,
+  });
+
+}
