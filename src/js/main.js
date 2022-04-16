@@ -120,10 +120,13 @@ class Slider {
 }
 
 const slider = new Slider(imageArr)
-slider.createSlider()
+if (document.querySelector('[data-slider]')) {
+    slider.createSlider()
+}
 navLink.forEach(el => {
-	el.addEventListener('click', showNav)
+    el.addEventListener('click', showNav)
 })
+
 
 //FOOTER
 
@@ -142,12 +145,13 @@ handleCurrentYear()
   // const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 
-const testowa = () =>{
-  console.log('siema');
+const testowa = e =>{
+  e.preventDefault()
+  console.log('Piotrek');
 }
 
 
-send.addEventListener('click', testowa)
+sendBtn.addEventListener('click', testowa)
 
   
 
