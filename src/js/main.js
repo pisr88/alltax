@@ -198,7 +198,7 @@ const testowa = () => {
 	console.log('siema')
 }
 
-send.addEventListener('click', testowa)
+sendBtn.addEventListener('click', testowa)
 
 //MAP
 
