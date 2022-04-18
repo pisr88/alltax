@@ -39,7 +39,8 @@ function javaScript(done) {
 		.pipe(sourcemaps.init())
 		.pipe(
 			babel({
-				plugins: ['@babel/preset-env'],
+				// presets: ['@babel/preset-env'],
+				plugins: ['@babel/plugin-transform-runtime'],
 			})
 		)
 		.pipe(uglify())

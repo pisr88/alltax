@@ -244,3 +244,4 @@ function initMap() {
 		content: contentString,
 	})
 }
+console.log('test');
