@@ -253,24 +253,19 @@ const checkErrors = () => {
 
 }
 
-
-// const checkName = (name,min) =>{
-  
-//   if(username.value.length < min){
-//     errorText.style.visibility = "visible"
-//   }else{
-//     errorText.style.visibility = "hidden"
-//   }
-// }
-
-
+if(document.querySelector(['.contact__form'])){
 sendBtn.addEventListener('click', e =>{
-  e.preventDefault()
-  checkForm([username,email])
-  checkLength(username,3)
-  checkEmail(email)
-  checkErrors()
-})
+  
+    
+    e.preventDefault()
+    checkForm([username,email])
+    checkLength(username,3)
+    checkEmail(email)
+    checkErrors()
+
+  })
+}
+
 
   
 
