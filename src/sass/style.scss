@@ -784,3 +784,19 @@ body {
   }
   }
 }
+
+// onas
+
+.pageaboutas{
+	padding-bottom: .5em;
+	&__body{
+		
+		p{
+			padding-bottom: 1em;
+			text-align: justify;
+			text-justify: inter-character;
+		}
+
+	}
+
+}

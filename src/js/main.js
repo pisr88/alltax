@@ -318,3 +318,4 @@ async function initMap() {
 }
 
 
+console.log('test');
