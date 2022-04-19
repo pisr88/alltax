@@ -318,4 +318,7 @@ async function initMap() {
 }
 
 
-console.log('test');
+if (document.querySelector('[data-contact]')){
+	const footerContact = document.querySelector('.footer__contact')
+	footerContact.style.display = 'none'
+}
