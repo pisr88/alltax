@@ -538,12 +538,16 @@ body {
 	}
 
 	&__down {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: #fff;
 		// border-top: 1px solid $color-primary;
 		padding: 1em;
+    
 	}
 }
 
@@ -803,6 +807,9 @@ body {
 	}
 
 }
+
+///PRACA
+
 .work{
   padding-top: 4em;
 	padding-bottom: .5em;
@@ -871,6 +878,8 @@ body {
 
 
 @media(min-width: 992px) {
+
+
 
   .contact{
     .wrapper{
