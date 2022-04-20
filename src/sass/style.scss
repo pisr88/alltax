@@ -343,12 +343,14 @@ body {
 //ABOUTAS
 .aboutas {
 	background-color: #fff;
+  
 
 	&__box {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+    
 	}
 	&__box-left {
 		position: relative;
@@ -788,6 +790,7 @@ body {
 // onas
 
 .pageaboutas{
+  padding-top: 4em;
 	padding-bottom: .5em;
 	&__body{
 		
@@ -801,6 +804,7 @@ body {
 
 }
 .work{
+  padding-top: 4em;
 	padding-bottom: .5em;
 	&__body{
 		
