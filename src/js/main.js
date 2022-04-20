@@ -133,7 +133,6 @@ navLink.forEach(el => {
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
-	console.log('wczytaj sie')
 }
 
 handleCurrentYear()
