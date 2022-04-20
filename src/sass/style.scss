@@ -833,7 +833,31 @@ body {
 
 @media(min-width: 576px) {
 
+  .contact{
 
+    &__form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    input,textarea{
+      width: 400px;
+    
+    }
+    textarea{
+      max-width: 400px;
+      max-height: 300px;
+      
+        }
+     &__space{
+       margin-top: 0px;
+       margin-right: 5em;
+     }   
+     &__map{
+       height: 300px;
+       width: 80%;
+     }
+  }
 
 
 }
@@ -848,13 +872,27 @@ body {
 
 @media(min-width: 992px) {
 
-
-
+  .contact{
+    .wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
+  &__map{
+    height: 400px;
+  }
+  }
 }
-
 
 @media(min-width: 1200px) {
 
+  .contact{
+    .wrapper{
+  justify-content: space-around;
+ 
+  }
+  }
 
-  
+
 }
