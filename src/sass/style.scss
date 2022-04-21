@@ -538,8 +538,6 @@ body {
 	}
 
 	&__down {
-    position: fixed;
-    bottom: 0;
     width: 100%;
 		display: flex;
 		justify-content: center;
@@ -786,7 +784,10 @@ body {
     
 
   &__map{
-    position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 90%;
     height: 300px;
     margin-top: 3em;
    
