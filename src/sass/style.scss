@@ -553,6 +553,15 @@ body {
 	position: relative;
 	margin-top: 4em;
 
+	&__item-header{
+		display: flex;
+		flex-direction: column;	
+		justify-content: center;
+		position: relative;
+		min-height: 100px;
+		text-align: center;
+	}
+
 	&__item-body {
 		display: flex;
 		flex-direction: column;
@@ -563,7 +572,7 @@ body {
 		margin: 1em 0 4em;
 		transition: transform 0.3s;
 		border: 3px solid $color-section-bg-third;
-		border-radius: 2%;
+		border-radius: 8px;
 		color: $color-text;
 	}
 	&__item-body:nth-child(even) {
@@ -573,7 +582,7 @@ body {
 		width: 0;
 		height: 0;
 		border-style: solid;
-		border-width: 64px 64px 0 0;
+		border-width: 54px 54px 0 0;
 		border-color: $color-primary transparent transparent transparent;
 		position: absolute;
 		left: 0;
@@ -582,8 +591,8 @@ body {
 	}
 	&__item-body:nth-child(even)::after {
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 5px;
+		left: 7px;
 		font-family: FontAwesome;
 		color: $color-section-bg-secondary;
 		font-size: 2rem;
@@ -591,7 +600,7 @@ body {
 	}
 
 	&__item-body:hover {
-		transform: translateY(-3%) scale(1.09);
+		transform: translateY(-3%) scale(1.05);
 		touch-action: auto;
 	}
 	&__item-body:last-child {
@@ -600,11 +609,13 @@ body {
 
 	&__item-title {
 		display: inline-block;
-		text-align: center;
 		font-size: 2.6rem;
 		color: $color-text-black;
 	}
 	&__item-price {
+		display: inline-block;
+		position: relative;
+		width: 100%;
 		text-align: center;
 		font-size: 1.2rem;
 	}
@@ -622,6 +633,7 @@ body {
 		border: 1px solid $color-primary;
 		border-radius: 15px;
 	}
+
 
 	&__item-conditions::after,
 	&__item-scope::after {
@@ -662,7 +674,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    // border-top: 1px solid $color-primary;
     padding: 1em;
   }
 }
@@ -827,7 +838,15 @@ body {
 
 
 @media(min-width: 375px) {
-
+	.pricelist {
+		&__item-body {
+			overflow: hidden;
+		}
+		&__item-body:nth-child(even)::before {
+			top: -2px;
+			left: -2px;
+		}
+	}
 
 }
 
@@ -839,15 +858,40 @@ body {
 }
 
 @media(min-width: 768px) {
+	.pricelist {
+	.pricelist__list {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: .5em;
+	}
 
+	&__item-body{
+		justify-content: flex-start;
+		max-width: 49%;
+		margin-bottom: 2.7em;
+	}
+	&__item-conditions{
+		position: relative;
+	}
 
-
-
+	&__item-list{
+		height: 350px;
+	}
+	&__item-list-conditions{
+		height: 200px;
+	}
+	}
 }
 
 
 @media(min-width: 992px) {
-
+	.pricelist {
+		&__item-body{
+			max-width: 30%;
+			margin-bottom: 0;
+		}
+		}
 
 
 }

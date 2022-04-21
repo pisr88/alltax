@@ -173,12 +173,12 @@ async function getOffers() {
 				newScope = newScope.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
 				newConditions = newConditions.map(el => `<li class="pricelist__item-list-item">${el}</li>`)
 				let htmlEl = `<div class="pricelist__item-body">
-				<h3 class="pricelist__item-title">${el.name}</h3>
-				<p class="pricelist__item-price">${el.price}</p>
+				<div class="pricelist__item-header"><h3 class="pricelist__item-title">${el.name}</h3>
+				<p class="pricelist__item-price">${el.price}</p></div>
 				<p class="pricelist__item-scope">Zakres</p>
 				<ul class="pricelist__item-list">${newScope.join().replaceAll(',', '')}</ul> 
 				<p class="pricelist__item-conditions">Warunki</p>
-					<ul class="pricelist__item-list">${newConditions.join().replaceAll(',', '')}</ul>
+					<ul class="pricelist__item-list pricelist__item-list-conditions">${newConditions.join().replaceAll(',', '')}</ul>
 				</div>`
 				htmlBox += htmlEl
 			})
