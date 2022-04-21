@@ -252,6 +252,49 @@ body {
 			border-bottom-right-radius: 0%;
 		}
 	}
+
+	&__desktop{
+		display: none;
+		justify-content: center;
+		align-items: center;
+		
+	.nav__header{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.nav__item-desk{
+		display: inline-block;
+		text-decoration: none;
+	}
+	
+	.nav__item-desk-link{
+		display: inline-block;
+		padding: 1em;
+		font-size: 2rem;
+		text-decoration: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+	
 }
 .logo {
 	text-decoration: none;
@@ -915,6 +958,20 @@ body {
 
 
 @media(min-width: 992px) {
+	.nav{
+
+		&__mobile{
+			display: none;
+		}
+
+		&__desktop{
+			display: flex;
+
+		}
+	}
+
+
+
 	.pricelist {
 		&__item-body{
 			max-width: 30%;
