@@ -988,6 +988,39 @@ body {
 		}
 	}
 
+	.offers{
+		&__box{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			justify-items: center;
+			align-items: stretch;
+		}
+
+		&__item{
+			border: 1px dashed $color-section-bg-third;
+			border-top: none;
+			border-bottom: none;
+		}
+
+		&__item:nth-child(n+5){
+			border-top: 1px dashed $color-section-bg-third;
+	
+		}
+
+		// &__item:nth-last-child(2){
+		// 	border: 1px dashed $color-section-bg-third;
+		// }
+
+		
+
+		&__btn{
+			position: relative;
+			transform: translateX(-50%);
+			display: inline-block;
+			left: 50%;
+		}
+	}
+
 
 
 	.pricelist {
