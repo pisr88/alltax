@@ -1006,13 +1006,7 @@ body {
 			border-top: 1px dashed $color-section-bg-third;
 	
 		}
-
-		// &__item:nth-last-child(2){
-		// 	border: 1px dashed $color-section-bg-third;
-		// }
-
-		
-
+	
 		&__btn{
 			position: relative;
 			transform: translateX(-50%);
@@ -1030,7 +1024,6 @@ body {
 			margin-bottom: 0;
 		}
 	}
-
 
 	.contact{
 		.wrapper{
