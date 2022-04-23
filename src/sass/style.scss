@@ -21,6 +21,7 @@ body {
 }
 
 .wrapper {
+	position: relative;
 	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
@@ -367,6 +368,7 @@ body {
 //OFFERS
 .offers {
 	&__box {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -383,8 +385,14 @@ body {
 		border-bottom: 2px dashed $color-section-bg-third;
 	}
 
-	&__item:nth-last-child(2) {
+	.offers__item:last-child{
 		border-bottom: none;
+	}
+
+	.offers__btn{
+		position: relative;
+		left: 50%;
+		transform: translateX(-60%);
 	}
 
 	&__icon {
@@ -911,6 +919,12 @@ body {
 		&__item-body:nth-child(even)::before {
 			top: -2px;
 			left: -2px;
+		}
+	}
+
+	.offers{
+		&__btn{
+			left: 50%;
 		}
 	}
 
