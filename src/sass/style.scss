@@ -511,7 +511,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	padding-bottom: 0px;
+	padding-bottom: .5em;
 
 	&__logo {
 		margin-bottom: 0.5em;
@@ -882,8 +882,8 @@ body {
 
 .work{
   padding-top: 4em;
-	padding-bottom: .5em;
-	&__body{
+	padding-bottom: 2em;
+	&__text{
 		
 		p{
 			padding-bottom: 1em;
@@ -1051,7 +1051,6 @@ body {
   .contact{
     .wrapper{
   justify-content: space-around;
- 
   }
   }
 
