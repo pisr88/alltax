@@ -37,22 +37,22 @@
             <p class="contact__item">Sob. - Ndz. 9:00 - 18:00</p>
             <p class="contact__item">bok@biuroalltax.pl</p>  
         </div>
-        <div class="contact__form">
+        <div action="insert.php" class="contact__form" method="post">
           <form >
             <h3 class="contact__sendUs">Napisz do nas!</h3>
             <div class="contact__box">
-              <input type="text" id="username" placeholder=" Imię">
+              <input type="text" id="username" placeholder=" Imię" name="imie">
               <p class="error-text">Imię musi zawierać minimum 3 litery</p>
             </div>
             <div class="contact__box">
-              <input type="email" id="email" placeholder=" Adres e-mail">
+              <input type="email" id="email" placeholder=" Adres e-mail" name="email">
               <p class="error-text">Niepoprawny adres e-mail</p>
             </div>
             <div class="contact__box">
-              <textarea id="text" placeholder=" Wiadomość"></textarea>
+              <textarea id="text" placeholder=" Wiadomość" name="komentarz"></textarea>
             </div>
             <div class="control-button">
-              <button class="send">Wyślij</button>
+              <button class="send" name="submit" value="submit" type="submit">Wyślij</button>
             </div>
           </form>
         </div>
