@@ -950,7 +950,7 @@ body {
         }
      &__space{
        margin-top: 0px;
-       margin-right: 5em;
+       
      }   
      &__map{
        height: 300px;
@@ -1036,6 +1036,12 @@ body {
 			left: 48%;
 			margin-top: 3em;
 		}
+
+    .contact{
+      &__space{
+        margin-right: 5em;
+      }
+    }
 	}
 
 
