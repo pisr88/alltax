@@ -15,6 +15,7 @@ html {
 }
 
 body {
+	position: relative;
 	font-size: 1.6rem;
 	font-family: 'Montserrat', sans-serif;
 	background-color: $color-section-bg-primary;
@@ -872,10 +873,9 @@ body {
 // onas
 
 .pageaboutas{
-  padding-top: 4em;
+  	padding-top: 4em;
 	padding-bottom: .5em;
-	&__body{
-		
+	&__body{	
 		p{
 			padding-bottom: 1em;
 			text-align: justify;
@@ -962,6 +962,14 @@ body {
 }
 
 @media(min-width: 768px) {
+
+	body{
+		display: flex;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
 
 	.header{
 		h1 {
