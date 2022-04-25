@@ -57,6 +57,7 @@ class Slider {
 
 		this.img = document.createElement('img')
 		this.img.setAttribute('src', this.images[this.actualImg])
+		this.img.setAttribute('alt', this.textSlide[this.actualImg])
 		this.img.classList.add('slider__img')
 		this.slider.append(this.img)
 
